@@ -1,4 +1,4 @@
-class Animal:
+class Animal: #Superclass
     def __init__(self, Name, Sound, Size, Intelligence):
         self.Name = Name #String
         self.Sound = Sound #String
@@ -9,7 +9,7 @@ class Animal:
         String = f"The animal's name is {self.Name}, it makes a {self.Sound}, its size is {self.Size} and its intelligence level is {self.Intelligence}."
         return String
 
-class Parrot(Animal):
+class Parrot(Animal): #Sub-class
     def __init__(self, pName, pSound, pSize, pIntelligence, pWingSpan, pNumberWords):
         super().__init__(pName, pSound, pSize, pIntelligence)
         self.WingSpan = pWingSpan #Integer
@@ -22,7 +22,7 @@ class Parrot(Animal):
         String = super().Description() + f" It has a wingspan of {self.WingSpan} cm and can say {self.NumberWords} words."
         return String
 
-class Wolf(Animal):
+class Wolf(Animal): #Subclass
     def __init__(self, wName, wSound, wSize, wIntelligence, wTerritorySize):
         super().__init__(wName, wSound, wSize, wIntelligence)
         self.TerritorySize = wTerritorySize #Integer
