@@ -1,4 +1,4 @@
-Values = list(map(int, input("Enter values, separating them by comma, to be sorted: ").split(','))) #Prompt user to input values in single line and convert to array of integers
+Values = list(map(int, input("Enter values, separating them by comma, to be sorted: ").split(','))) #Prompt user to input values in single line and convert to list of integers
 Length = len(Values) 
 
 for Index in range(1, Length): #Insertion sort algorithm
@@ -9,4 +9,4 @@ for Index in range(1, Length): #Insertion sort algorithm
         Values[Key] = Temp
         Key = Key - 1
 
-print(Values) #Output array
+print(Values) #Output list
