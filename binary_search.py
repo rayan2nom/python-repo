@@ -3,8 +3,9 @@ import random #Imports Random library
 Array = []
 for x in range(15): #Appending array with 15 random numbers
     Number = random.randint(0, 51)
-    if Number not in Array: #Ensures each integer inputted is unique
-        Array.append(Number)
+    while Number in Array: #Ensures each integer inputted is unique
+        Number = random.randint(0, 51)
+    Array.append(Number)
 Array.sort() #Sorts array in ascending order by default
 
 #Binary Search algorithm
